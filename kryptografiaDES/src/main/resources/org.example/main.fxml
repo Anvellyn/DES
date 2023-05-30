@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<GridPane fx:id="root" prefHeight="620.0" prefWidth="860.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.Controller">
+   <columnConstraints>
+       <ColumnConstraints hgrow="SOMETIMES" maxWidth="860.0" minWidth="10.0" prefWidth="860.0" />
+      <ColumnConstraints maxWidth="0.0" minWidth="0.0" prefWidth="0.0" />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints maxHeight="382.59998779296876" minHeight="10.0" prefHeight="26.400009155273438" vgrow="SOMETIMES" />
+       <RowConstraints maxHeight="382.59998779296876" minHeight="10.0" prefHeight="116.99998779296872" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="570.4000122070313" minHeight="10.0" prefHeight="473.8000122070313" vgrow="SOMETIMES" />
+   </rowConstraints>
+         <GridPane fx:id="firstTable" GridPane.columnSpan="2" GridPane.rowIndex="1" GridPane.rowSpan="2">
+             <columnConstraints>
+                 <ColumnConstraints hgrow="SOMETIMES" maxWidth="467.0" minWidth="10.0" prefWidth="141.2" />
+                 <ColumnConstraints hgrow="SOMETIMES" maxWidth="646.0000152587891" minWidth="10.0" prefWidth="250.19999999999996" />
+                 <ColumnConstraints hgrow="SOMETIMES" maxWidth="646.0000152587891" minWidth="10.0" prefWidth="136.60000000000002" />
+                 <ColumnConstraints hgrow="SOMETIMES" maxWidth="646.0000152587891" minWidth="10.0" prefWidth="254.60000000000002" />
+             </columnConstraints>
+             <rowConstraints>
+            <RowConstraints maxHeight="28.2" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                 <RowConstraints maxHeight="44.2" minHeight="10.0" prefHeight="39.0" vgrow="SOMETIMES" />
+                 <RowConstraints maxHeight="44.799992370605466" minHeight="10.0" prefHeight="25.400000000000006" vgrow="SOMETIMES" />
+             </rowConstraints>
+             <Label fx:id="valueHEXKey" prefHeight="18.0" prefWidth="148.0" text="Wartość klucza (HEX)" GridPane.rowIndex="1">
+                 <GridPane.margin>
+                     <Insets left="10.0" />
+                 </GridPane.margin>
+                 <font>
+                     <Font name="System Bold" size="12.0" />
+                 </font>
+             </Label>
+             <Button fx:id="generateKey" mnemonicParsing="false" onAction="#generateKey" prefHeight="26.0" prefWidth="128.0" text="Wygeneruj klucz" GridPane.columnIndex="2" GridPane.rowIndex="1">
+            <GridPane.margin>
+               <Insets left="5.0" />
+            </GridPane.margin>
+            <font>
+               <Font name="System Bold" size="12.0" />
+            </font>
+         </Button>
+         <TextField fx:id="nameOfKeyFile" maxHeight="26.0" maxWidth="162.0" minHeight="26.0" minWidth="145.0" prefHeight="26.0" prefWidth="157.0" promptText="Nazwa pliku klucza" GridPane.columnIndex="3" GridPane.rowIndex="2">
+            <GridPane.margin>
+               <Insets left="10.0" />
+            </GridPane.margin>
+         </TextField>
+         <Button fx:id="saveKeyFile" mnemonicParsing="false" onAction="#saveKeyAction" text="Zapisz" GridPane.columnIndex="3" GridPane.rowIndex="2">
+            <GridPane.margin>
+               <Insets left="180.0" />
+            </GridPane.margin>
+            <font>
+               <Font name="System Bold" size="12.0" />
+            </font>
+         </Button>
+         <Label fx:id="loadFileKey" layoutX="20.0" layoutY="147.0" prefHeight="18.0" prefWidth="187.0" text="Wczytaj klucz z pliku" GridPane.rowIndex="2">
+            <font>
+               <Font name="System Bold" size="12.0" />
+            </font>
+            <GridPane.margin>
+               <Insets left="10.0" />
+            </GridPane.margin>
+         </Label>
+         <Button fx:id="loadKeyButton" layoutX="336.0" layoutY="144.0" maxHeight="22.0" minHeight="22.0" mnemonicParsing="false" onAction="#loadKeyAction" prefHeight="22.0" prefWidth="66.0" text="Wczytaj" GridPane.columnIndex="1" GridPane.rowIndex="2">
+            <font>
+               <Font name="System Bold" size="12.0" />
+            </font>
+            <GridPane.margin>
+               <Insets left="180.0" />
+            </GridPane.margin>
+         </Button>
+         <Label fx:id="saveKeyToFile" layoutX="421.0" layoutY="147.0" prefHeight="18.0" prefWidth="133.0" text="Zapisz klucz do pliku" GridPane.columnIndex="2" GridPane.rowIndex="2">
+            <font>
+               <Font name="System Bold" size="12.0" />
+            </font>
+            <GridPane.margin>
+               <Insets left="10.0" />
+            </GridPane.margin>
+         </Label>
+         <Label fx:id="algorithmDES" prefHeight="18.0" prefWidth="118.0" text="Algorytm DES">
+            <GridPane.margin>
+               <Insets left="10.0" />
+            </GridPane.margin>
+            <font>
+               <Font name="System Bold" size="12.0" />
+            </font>
+         </Label>
+      <TextField fx:id="valueKeyText" GridPane.columnIndex="1" GridPane.rowIndex="1">
+         <GridPane.margin>
+            <Insets left="10.0" right="10.0" />
+         </GridPane.margin>
+      </TextField>
+      <TextField fx:id="keyLoad" maxWidth="162.0" minWidth="154.0" prefHeight="26.0" prefWidth="154.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+         <GridPane.margin>
+            <Insets left="10.0" />
+         </GridPane.margin>
+      </TextField>
+         <GridPane.margin>
+            <Insets left="2.0" />
+         </GridPane.margin>
+         </GridPane>
+    <GridPane fx:id="secondTable" prefHeight="390.0" prefWidth="798.0" GridPane.rowIndex="2">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="403.4" minWidth="10.0" prefWidth="324.6" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="403.4" minWidth="10.0" prefWidth="142.60000000000002" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="467.0" minWidth="10.0" prefWidth="318.4" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints maxHeight="158.4" minHeight="0.0" prefHeight="25.199981689453125" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="300.2000019073486" minHeight="10.0" prefHeight="27.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="300.2000019073486" minHeight="10.0" prefHeight="42.99999999999999" vgrow="SOMETIMES" />
+         <RowConstraints maxHeight="300.2000019073486" minHeight="10.0" prefHeight="43.40001220703125" vgrow="SOMETIMES" />
+         <RowConstraints maxHeight="300.2000019073486" minHeight="10.0" prefHeight="33.79998779296875" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="300.2000019073486" minHeight="10.0" prefHeight="36.19999389648436" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="300.2000019073486" minHeight="10.0" prefHeight="178.6000244140625" vgrow="SOMETIMES" />
+         <RowConstraints maxHeight="300.2000019073486" minHeight="10.0" prefHeight="34.5999755859375" vgrow="SOMETIMES" />
+         <RowConstraints maxHeight="300.2000019073486" minHeight="10.0" prefHeight="48.00004882812499" vgrow="SOMETIMES" />
+        </rowConstraints>
+        <TextField fx:id="encryptedText" alignment="TOP_LEFT" prefHeight="200.0" prefWidth="200.0" promptText="Tu podaj szyfrograf" GridPane.columnIndex="2" GridPane.rowIndex="6">
+            <GridPane.margin>
+                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+            </GridPane.margin>
+        </TextField>
+        <Label fx:id="encryptLabel" prefHeight="18.0" prefWidth="231.0" text="Szyfrowanie/deszyfrowanie">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+            <GridPane.margin>
+                <Insets left="10.0" />
+            </GridPane.margin>
+        </Label>
+        <TextField fx:id="nameOfFileWithoutEncryption" maxHeight="26.0" maxWidth="326.0" minHeight="26.0" minWidth="162.0" prefHeight="26.0" prefWidth="326.0" promptText="Nazwa pliku z tekstem jawnym" GridPane.rowIndex="2">
+            <GridPane.margin>
+                <Insets left="10.0" />
+            </GridPane.margin>
+        </TextField>
+        <Label fx:id="loadTextWithoutEncryption" prefHeight="18.0" prefWidth="185.0" text="Otwórz plik do zaszyfrowania" GridPane.rowIndex="1">
+            <GridPane.margin>
+                <Insets left="10.0" />
+            </GridPane.margin>
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+        </Label>
+        <TextField fx:id="publicText" alignment="TOP_LEFT" prefHeight="200.0" prefWidth="200.0" promptText="Tu podaj tekst jawny" GridPane.rowIndex="6">
+            <GridPane.margin>
+                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+            </GridPane.margin>
+        </TextField>
+        <Button fx:id="decryptButton" alignment="CENTER" mnemonicParsing="false" onAction="#decrypt" prefHeight="26.0" prefWidth="94.0" text="&lt;- Deszyfruj" GridPane.columnIndex="1" GridPane.rowIndex="6">
+            <GridPane.margin>
+                <Insets left="40.0" />
+            </GridPane.margin>
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+        </Button>
+        <Button fx:id="encryptButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#encrypt" prefHeight="26.0" prefWidth="91.0" text="Szyfruj -&gt;" GridPane.columnIndex="1" GridPane.rowIndex="6">
+            <opaqueInsets>
+                <Insets />
+            </opaqueInsets>
+            <GridPane.margin>
+                <Insets bottom="60.0" left="40.0" />
+            </GridPane.margin>
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+        </Button>
+        <Label fx:id="loadFileEncrypted" text="Otwórz plik do odszyfrowania" GridPane.columnIndex="2" GridPane.rowIndex="1">
+            <GridPane.margin>
+                <Insets left="10.0" />
+            </GridPane.margin>
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+        </Label>
+        <TextField fx:id="nameOfFileEncryptedFile" layoutX="20.0" layoutY="80.0" maxHeight="26.0" maxWidth="322.0" minHeight="26.0" minWidth="162.0" prefHeight="26.0" prefWidth="322.0" promptText="Nazwa pliku z szyfrogramem" GridPane.columnIndex="2" GridPane.rowIndex="2">
+            <GridPane.margin>
+                <Insets left="10.0" />
+            </GridPane.margin>
+        </TextField>
+        <Label fx:id="savePublicTextToFile" alignment="CENTER_RIGHT" prefHeight="18.0" prefWidth="240.0" text="Zapisz plik zawierający tekst jawny" GridPane.rowIndex="7">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+            <GridPane.margin>
+                <Insets left="10.0" />
+            </GridPane.margin>
+        </Label>
+        <TextField fx:id="nameOfFileWithPublicText" maxHeight="26.0" maxWidth="220.0" minHeight="26.0" minWidth="162.0" prefHeight="26.0" prefWidth="180.0" promptText="Nazwa pliku z tekstem jawnym" GridPane.rowIndex="8">
+            <GridPane.margin>
+                <Insets bottom="5.0" left="10.0" />
+            </GridPane.margin>
+        </TextField>
+        <Button fx:id="savePublicTextButton" mnemonicParsing="false" onAction="#saveFileWithPublicText" prefHeight="26.0" prefWidth="72.0" text="Zapisz" GridPane.rowIndex="8">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+            <GridPane.margin>
+                <Insets bottom="5.0" left="240.0" />
+            </GridPane.margin>
+        </Button>
+        <Button fx:id="saveEncryptedFile" mnemonicParsing="false" onAction="#saveEncryptedFile" prefHeight="26.0" prefWidth="72.0" text="Zapisz" GridPane.columnIndex="2" GridPane.rowIndex="8">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+            <GridPane.margin>
+                <Insets bottom="5.0" left="240.0" />
+            </GridPane.margin>
+        </Button>
+        <Label fx:id="saveEncryptedLabel" alignment="CENTER_RIGHT" prefHeight="18.0" prefWidth="240.0" text="Zapisz plik zawierający szyfrogramem" GridPane.columnIndex="2" GridPane.rowIndex="7">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+        </Label>
+        <TextField fx:id="encryptedFileName" maxHeight="26.0" maxWidth="220.0" prefHeight="18.0" prefWidth="220.0" promptText="Nazwa pliku z szyfrogramem" GridPane.columnIndex="2" GridPane.rowIndex="8">
+            <GridPane.margin>
+                <Insets bottom="5.0" left="10.0" />
+            </GridPane.margin>
+        </TextField>
+      <Label fx:id="k1" prefHeight="18.0" prefWidth="289.0" GridPane.rowIndex="5">
+         <GridPane.margin>
+            <Insets left="10.0" />
+         </GridPane.margin>
+      </Label>
+      <Label fx:id="k2" prefHeight="14.0" prefWidth="290.0" GridPane.columnIndex="2" GridPane.rowIndex="5">
+         <GridPane.margin>
+            <Insets left="10.0" />
+         </GridPane.margin>
+      </Label>
+      <Label prefHeight="18.0" prefWidth="338.0" text="Wpisz tekst publiczny" GridPane.rowIndex="5">
+         <GridPane.margin>
+            <Insets left="10.0" />
+         </GridPane.margin>
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label prefHeight="18.0" prefWidth="324.0" text="Wpisz tekst z szyfrogramem" GridPane.columnIndex="2" GridPane.rowIndex="5">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <GridPane.margin>
+            <Insets left="10.0" />
+         </GridPane.margin>
+      </Label>
+      <Label GridPane.rowIndex="3">
+         <GridPane.margin>
+            <Insets left="10.0" />
+         </GridPane.margin>
+      </Label>
+      <Button fx:id="encryptButton1" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#encrypt1" prefHeight="26.0" prefWidth="87.0" text="Szyfruj -&gt;" GridPane.columnIndex="1" GridPane.rowIndex="2">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <GridPane.margin>
+            <Insets left="40.0" />
+         </GridPane.margin>
+      </Button>
+      <TextField fx:id="nameOfFileEncryptedFile1" maxHeight="26.0" maxWidth="321.0" minHeight="26.0" minWidth="162.0" prefHeight="26.0" prefWidth="321.0" promptText="Nazwa pliku z szyfrogramem" GridPane.columnIndex="2" GridPane.rowIndex="3">
+         <GridPane.margin>
+            <Insets left="10.0" />
+         </GridPane.margin>
+      </TextField>
+      <TextField fx:id="nameOfFileWithoutEncryption1" maxHeight="26.0" maxWidth="326.0" minHeight="26.0" minWidth="162.0" prefHeight="26.0" prefWidth="326.0" promptText="Nazwa pliku z tekstem jawnym" GridPane.rowIndex="3">
+         <GridPane.margin>
+            <Insets left="10.0" />
+         </GridPane.margin>
+      </TextField>
+      <Button fx:id="decryptButton1" alignment="CENTER" mnemonicParsing="false" onAction="#decrypt1" prefHeight="26.0" prefWidth="89.0" text="&lt;- Deszyfruj" GridPane.columnIndex="1" GridPane.rowIndex="3">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <GridPane.margin>
+            <Insets left="40.0" />
+         </GridPane.margin>
+      </Button>
+      <Label fx:id="komunikat1" prefHeight="18.0" prefWidth="326.0" GridPane.rowIndex="4">
+         <GridPane.margin>
+            <Insets left="10.0" />
+         </GridPane.margin>
+      </Label>
+      <Label fx:id="komunikat2" prefHeight="18.0" prefWidth="314.0" GridPane.columnIndex="2" GridPane.rowIndex="4">
+         <GridPane.margin>
+            <Insets left="10.0" />
+         </GridPane.margin>
+      </Label>
+    </GridPane>
+    <GridPane fx:id="menuBar" prefHeight="26.0" prefWidth="860.0">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+        <MenuBar prefHeight="26.0" prefWidth="860.0">
+            <Menu mnemonicParsing="false" text="Algorytm DES" />
+            <Menu mnemonicParsing="false" text="Algorytm RSA" />
+            <Menu mnemonicParsing="false" text="Podpisy cyfrowe" />
+        </MenuBar>
+    </GridPane>
+</GridPane>

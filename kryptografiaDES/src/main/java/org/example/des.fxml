@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="815.0" prefWidth="928.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.Controller1">
+   <children>
+      <Label layoutX="388.0" layoutY="8.0" prefHeight="43.0" prefWidth="175.0" text="Algorytm DES">
+         <font>
+            <Font name="System Bold" size="23.0" />
+         </font>
+      </Label>
+      <Label layoutX="33.0" layoutY="85.0" prefHeight="25.0" prefWidth="55.0" text="Klucz:">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="textFieldKlucz" layoutX="88.0" layoutY="85.0" prefHeight="25.0" prefWidth="328.0" promptText="Podaj klucz" />
+      <Button fx:id="przyciskGenerowanieKlucza" layoutX="445.0" layoutY="85.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="129.0" text="Wygeneruj klucz" />
+      <Label layoutX="341.0" layoutY="145.0" prefHeight="43.0" prefWidth="247.0" text="Szyfrowanie i deszyfrowanie">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="43.0" layoutY="221.0" prefHeight="25.0" prefWidth="213.0" text="Wpisz tekst do zaszyfrowania:">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="605.0" layoutY="221.0" prefHeight="25.0" prefWidth="222.0" text="Wpisz tekst do odszyfrowania::">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="tekstJawny" layoutX="43.0" layoutY="273.0" prefHeight="214.0" prefWidth="284.0" promptText="Tutaj wpisz tekst do zaszyfrowania." />
+      <TextField fx:id="tekstZSzyfrogramem" layoutX="598.0" layoutY="273.0" prefHeight="214.0" prefWidth="284.0" promptText="Tutaj wpisz tekst do odszyfrowania." />
+      <Button fx:id="szyfrujTekstJawnyPrzycisk" layoutX="393.0" layoutY="308.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="142.0" text="Szyfruj ---------&gt;" />
+      <Button fx:id="deszyfrujTekstJawnyPrzycisk" layoutX="393.0" layoutY="388.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="142.0" text="&lt;---------- Deszyfruj" />
+      <Label layoutX="29.0" layoutY="489.0" />
+      <Label layoutX="47.0" layoutY="580.0" prefHeight="25.0" prefWidth="159.0" text="Szyfrowanie pliku:">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="tekstPlikDoSzyfrowania" layoutX="43.0" layoutY="629.0" prefHeight="25.0" prefWidth="309.0" promptText="Tutaj pojawi się nazwa pliku" />
+      <TextField fx:id="tekstPlikPoSzyfrowaniu" layoutX="591.0" layoutY="629.0" prefHeight="25.0" prefWidth="298.0" promptText="Tutaj pojawi się nazwa pliku" />
+      <Button fx:id="szyfrowaniePlikuPrzycisk" layoutX="430.0" layoutY="629.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="91.0" text="Szyfruj" />
+      <TextField fx:id="tekstPlikPrzedOdszyfrowaniem" layoutX="43.0" layoutY="723.0" prefHeight="25.0" prefWidth="309.0" promptText="Tutaj pojawi się nazwa pliku" />
+      <Label layoutX="47.0" layoutY="683.0" text="Odszyfrowanie pliku:">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="tekstPlikPoOdszyfrowaniu" layoutX="591.0" layoutY="723.0" prefHeight="25.0" prefWidth="298.0" promptText="Tutaj pojawi się nazwa pliku" />
+      <Button fx:id="odszyfrowaniePlikuPrzycisk" layoutX="430.0" layoutY="723.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="91.0" text="Deszyfruj" />
+      <Button layoutX="217.0" layoutY="519.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="110.0" text="Zapisz do pliku" />
+      <Button layoutX="772.0" layoutY="519.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="110.0" text="Zapisz do pliku" />
+   </children>
+</AnchorPane>
